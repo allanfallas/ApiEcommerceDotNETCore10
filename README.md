@@ -31,7 +31,7 @@ Una API REST moderna construida con .NET 10.0 para gestionar un sistema de comer
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <URL-DEL-REPOSITORIO>
+git clone https://github.com/allanfallas/ApiEcommerceDotNETCore10
 cd ApiEcommerce
 ```
 
