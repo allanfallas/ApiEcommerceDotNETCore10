@@ -2,6 +2,10 @@
 
 Una API REST moderna construida con .NET 10.0 para gestionar un sistema de comercio electrónico con características completas de autenticación, autorización, versionado de API y mapeo de datos con Mapster.
 
+[![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
+
+Replace `OWNER/REPO` in the badge URL above with your GitHub user or organization and repository name to enable the status badge.
+
 ## 🚀 Características
 
 - ✅ **API RESTful** - Endpoints completamente funcionales
