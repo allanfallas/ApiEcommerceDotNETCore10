@@ -20,16 +20,16 @@ jobs:
           dotnet-version: "10.0.x"
 
       - name: Restore
-        run: dotnet restore ApiEcommerce/ApiEcommerce.csproj
+        run: dotnet restore ApiEcommerce.csproj
 
       - name: Build
-        run: dotnet build ApiEcommerce/ApiEcommerce.csproj --configuration Release --no-restore
+        run: dotnet build ApiEcommerce.csproj --configuration Release --no-restore
 
       - name: Run tests
         run: dotnet test ApiEcommerce.Tests/ApiEcommerce.Tests.csproj --configuration Release --no-build --verbosity normal
 
       - name: Publish app
-        run: dotnet publish ApiEcommerce/ApiEcommerce.csproj -c Release -o publish --no-build
+        run: dotnet publish ApiEcommerce.csproj -c Release -o publish --no-build
 
       - name: Docker login
         uses: docker/login-action@v3
@@ -40,7 +40,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./ApiEcommerce
-          file: ./ApiEcommerce/Dockerfile
+          context: .
+          file: ./Dockerfile
           push: true
           tags: docker.io/${{ secrets.DOCKER_USERNAME }}/apiecommerce:latest
