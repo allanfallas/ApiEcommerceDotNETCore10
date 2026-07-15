@@ -33,4 +33,9 @@
     <Folder Include="Repository\IRepository\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="ApiEcommerce.Tests/**/*.cs" />
+    <None Remove="ApiEcommerce.Tests/**/*.cs" />
+  </ItemGroup>
+
 </Project>
